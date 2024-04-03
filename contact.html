@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>From My Perspective</title>
+</head>
+
+<body>
+    <header>
+        <a href="#main" class="skip">Skip to main content</a>
+        <nav>
+            <ul>
+                <li class="menu_item"><a href="index.html">Home</a></li>
+                <li class="menu_item"><a href="pets.html">Pets</a></li>
+                <li class="menu_item"><a href="recipes.html">Recipes</a></li>
+                <li class="menu_item"><a href="travel.html">Travel</a></li>
+                <li class="menu_item_active"><a href="contact.html">Let's Share</a></li>
+            </ul>
+        </nav>
+        <h1>Let's Share</h1>
+    </header>
+    <main id="main">
+        <img src="images/Stamp_1.png" class="stamp" alt="Decorative image of a traveling stamp">
+
+        <div>
+            <h2>I want to hear your stories!</h2>
+            <div class="form">
+                <form id="storyForm">
+                    <label for="firstName">First Name:</label><br>
+                    <input type="text" id="firstName" name="firstName"><br><br>
+
+                    <label for="lastName">Last Name:</label><br>
+                    <input type="text" id="lastName" name="lastName"><br><br>
+
+                    <label for="country">Which continent are you from?:</label><br>
+                    <select id="country" name="country">
+                        <option value="America">America</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Oceania">Oceania</option>
+                    </select>
+
+                    <label for="message">Your Story:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+
+                    <input type="submit" value="Submit">
+                    <input type="button" value="Reset Form" id="resetBtn">
+                </form>
+            </div>
+        </div>
+
+        <script>
+            const form = document.getElementById('storyForm');
+            const resetBtn = document.getElementById('resetBtn');
+
+            resetBtn.addEventListener('click', function () {
+                form.reset();
+            });
+        </script>
+
+    </main>
+
+    <footer>Copyright &#169; All Rights Reserved</footer>
+
+</body>
+
+</html>
